@@ -1,0 +1,13 @@
+{
+  "replacements": [
+    {
+      "name": "company",
+      "pattern": "%c"
+    },
+    {
+      "name": "recipient name",
+      "pattern" : "%r"
+    }
+
+  ]
+}

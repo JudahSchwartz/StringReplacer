@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -29,7 +30,7 @@ public class Main {
         for(Replacement rep: replacements){
             template = template.replace(rep.getPattern(),rep.getValue());
         }
-        System.out.println("finished template : " + template);
+        System.out.println("finished template : \n" + template);
     }
 
     private static Replacement[] loadReplacementsFromProperties() {
@@ -51,7 +52,6 @@ public class Main {
 
     private static JSONObject getJsonFromFile() throws IOException {
         String content = Files.readString(Paths.get("properties.json"), StandardCharsets.US_ASCII);
-        System.out.println(content);
         try {
             return new JSONObject(content);
         } catch (JSONException e) {

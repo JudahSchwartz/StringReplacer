@@ -7,6 +7,10 @@
       "pattern": "%company"
     },
     {
+      "name": "position name",
+      "pattern": "%position"
+    },
+    {
       "name": "recipient name",
       "pattern" : "%recipient"
     },

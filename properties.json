@@ -1,4 +1,6 @@
 {
+  "datePattern": "%date",
+  "dateLayout": "dd/MM/yyyy",
   "replacements": [
     {
       "name": "company",

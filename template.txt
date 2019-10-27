@@ -1,1 +1,1 @@
-hello %c please %r replace me.
+hello %c please %r replace me. the date is %date

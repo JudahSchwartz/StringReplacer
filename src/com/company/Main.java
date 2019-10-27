@@ -21,7 +21,6 @@ public class Main {
         for(Replacement rep: replacements){
             System.out.println("What value would you like to replace for " + rep.getName());
             rep.setValue(scanner.nextLine());
-            System.out.println(rep);
         }
         String template = null;
         try {
@@ -43,7 +42,6 @@ public class Main {
     private static String replaceDate(String template) throws IOException {
         SimpleDateFormat formatter = new SimpleDateFormat(getJsonFromFile().getString("dateLayout"));
         Date date = new Date();
-        System.out.println(formatter.format(date));
         return template.replace(getJsonFromFile().getString("datePattern"),formatter.format(date));
     }
 

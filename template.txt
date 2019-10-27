@@ -1,1 +1,25 @@
-hello %c please %r replace me. the date is %date
+%date
+%company
+Dear %recipient,
+
+I'm excited to be applying for the %position position at %company. With several years of professional software development experience under my belt, I am confident that I will be a great fit as %company's newest %position.
+I enjoy being challenged to break down complex problems and solve them, while planning for future additions and changes to the software specs. I also enjoy engaging in projects that require me to work outside my current knowledge base.
+At my most recent position at BH Photo Video, I ensured quality of code by reviewing other developers' pull requests. I heightened security by creating an algorithm that determines when a user should reenter credit cards, and by finding and closing security holes in the website (I also won the largest available cash reward for finding a security leak on the site during a company hackathon.)
+If you are looking for a developer who is:
+
+*  Highly skilled in designing and developing software
+*  %attribute1
+*  %attribute2
+*  Deeply familiar with data structures and algorithms
+*  Well versed with SOLID Design
+*  Quick to learn and apply new skills
+
+Then you need look no further. You will see from my attached CV that I meet all these qualifications and more.
+I'd be happy to provide names and contact information for references upon request.
+To contact me, please call me at 058 713 2013, or email me at judahsch%gmail.com.
+Thank you for taking the time to review my resume. I look forward to speaking with you.
+
+Warm regards,
+Judah Schwartz
+
+

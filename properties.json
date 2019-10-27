@@ -4,12 +4,20 @@
   "replacements": [
     {
       "name": "company",
-      "pattern": "%c"
+      "pattern": "%company"
     },
     {
       "name": "recipient name",
-      "pattern" : "%r"
+      "pattern" : "%recipient"
+    },
+    {
+      "name": "attribute1",
+      "pattern" : "%attribute1"
+    }, {
+      "name": "attribute2",
+      "pattern" : "%attribute2"
     }
+
 
   ]
 }

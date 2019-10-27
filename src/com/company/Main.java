@@ -9,10 +9,12 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
-
+    static JSONObject jsonFromFile;
     public static void main(String[] args) {
         Replacement[] replacements = loadReplacementsFromProperties();
         Scanner scanner = new Scanner(System.in);
@@ -30,7 +32,19 @@ public class Main {
         for(Replacement rep: replacements){
             template = template.replace(rep.getPattern(),rep.getValue());
         }
+        try {
+            template = replaceDate(template);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("finished template : \n" + template);
+    }
+
+    private static String replaceDate(String template) throws IOException {
+        SimpleDateFormat formatter = new SimpleDateFormat(getJsonFromFile().getString("dateLayout"));
+        Date date = new Date();
+        System.out.println(formatter.format(date));
+        return template.replace(getJsonFromFile().getString("datePattern"),formatter.format(date));
     }
 
     private static Replacement[] loadReplacementsFromProperties() {
@@ -51,9 +65,11 @@ public class Main {
     }
 
     private static JSONObject getJsonFromFile() throws IOException {
+        if(jsonFromFile!=null)
+            return jsonFromFile;
         String content = Files.readString(Paths.get("properties.json"), StandardCharsets.US_ASCII);
         try {
-            return new JSONObject(content);
+            return jsonFromFile= new JSONObject(content);
         } catch (JSONException e) {
             e.printStackTrace();
             return null;
